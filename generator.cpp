@@ -530,7 +530,8 @@ void Generator::generateCode()
 //
 // Finally create and initialize the static meta object
 //
-    fprintf(out, "Q_CONSTINIT const QMetaObject %s::staticMetaObject = { {\n",
+    fprintf(out, "Q_CONSTINIT const QMetaObject %s::staticMetaObject = { \n"
+    "    .d {\n",
             cdef->qualified.constData());
 
     if (isQObject)
