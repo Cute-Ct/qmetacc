@@ -8,6 +8,13 @@
 
 QT_BEGIN_NAMESPACE
 
+//windows, visual c++
+#if defined(_MSC_VER) && !defined(__INTEL_COMPILER)
+    #ifdef PRIVATE
+        #undef PRIVATE
+    #endif
+#endif
+
 #define FOR_ALL_TOKENS(F) \
     F(NOTOKEN) \
     F(IDENTIFIER) \

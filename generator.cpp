@@ -9,7 +9,7 @@
 #include "utils.h"
 #include <qobject/qmetatype.h>
 #include <qobject/qmetaobject.h>
-// #include <qobject/qmetaobject_p.h>
+#include <qobject/qmetamethod.h> //enum PropertyFlags
 
 #include <serialization/qjsondocument.h>
 #include <serialization/qjsonobject.h>
@@ -20,9 +20,6 @@
 
 #include <math.h>
 #include <stdio.h>
-
-// #include <private/qmetaobject_p.h> //for the flags.
-#include <plugin/qplugin.h> //for the flags.
 
 QT_BEGIN_NAMESPACE
 

@@ -3,10 +3,6 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
 #include <depfile_shared.h>
-#include "preprocessor.h"
-#include "moc.h"
-#include "outputrevision.h"
-#include "collectjson.h"
 
 #include <io/qfile.h>
 #include <io/qfileinfo.h>
@@ -20,6 +16,12 @@
 #include <tools/qcommandlineoption.h>
 #include <tools/qcommandlineparser.h>
 #include <tools/qscopedpointer.h>
+
+#include "preprocessor.h"
+#include "moc.h"
+#include "outputrevision.h"
+#include "collectjson.h"
+#include "token.h"
 
 QT_BEGIN_NAMESPACE
 
