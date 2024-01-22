@@ -7,9 +7,9 @@
 #include "cbordevice.h"
 #include "outputrevision.h"
 #include "utils.h"
-#include <qobject/qmetatype.h>
-#include <qobject/qmetaobject.h>
-#include <qobject/qmetamethod.h> //enum PropertyFlags
+#include <metaobject/qmetatype.h>
+#include <metaobject/qmetaobject.h>
+#include <metaobject/qmetamethod.h> //enum PropertyFlags
 
 #include <serialization/qjsondocument.h>
 #include <serialization/qjsonobject.h>

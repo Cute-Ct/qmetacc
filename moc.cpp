@@ -12,7 +12,7 @@
 #include <io/qdir.h>
 #include <serialization/qjsondocument.h>
 
-#include <qobject/qmetaobject_moc.h> // for normalizeTypeInternal
+#include <metaobject/qmetaobject_moc.h> // for normalizeTypeInternal
 #include <tools/qduplicatetracker.h>
 
 QT_BEGIN_NAMESPACE
@@ -1090,7 +1090,7 @@ void Moc::generate(FILE *out, FILE *jsonOutput)
     if (classList.size() && classList.constFirst().classname == "Qt")
         fprintf(out, "#include <QtCore/qobject.h>\n");
 
-    fprintf(out, "#include <qobject/qmetatype.h>\n");  // For QMetaType::Type
+    fprintf(out, "#include <metaobject/qmetatype.h>\n");  // For QMetaType::Type
     if (mustIncludeQPluginH)
         fprintf(out, "#include <QtCore/qplugin.h>\n");
 
@@ -1098,9 +1098,9 @@ void Moc::generate(FILE *out, FILE *jsonOutput)
     for (const QByteArray &qtContainer : qtContainers)
         fprintf(out, "#include <QtCore/%s>\n", qtContainer.constData());
 
-    fprintf(out, "\n%s#include <qobject/qtmochelpers.h>\n%s\n",
+    fprintf(out, "\n%s#include <metaobject/qtmochelpers.h>\n%s\n",
 #if QT_VERSION <= QT_VERSION_CHECK(6, 9, 0)
-            "#if __has_include(<qobject/qtmochelpers.h>)\n",
+            "#if __has_include(<metaobject/qtmochelpers.h>)\n",
             "#else\n"
             "QT_BEGIN_MOC_NAMESPACE\n"
             "#endif\n"

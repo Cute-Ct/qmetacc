@@ -16,7 +16,7 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC
   UNICODE
 )
 
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../qobject")
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../metaobject")
   message(STATUS "Building with qcorelib source code: " "${CMAKE_CURRENT_SOURCE_DIR}/../qobject")
   #build with qcorelib source code
   target_link_libraries(${PROJECT_NAME} qcorelib)
